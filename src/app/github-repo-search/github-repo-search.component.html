@@ -1,0 +1,44 @@
+<div class="searchWrapper">
+    <div class="searchContainer">
+        <div class="title">
+            Search more than 389M repositories 
+        </div>
+        <div class="Search"> 
+            <input type="text" [(ngModel)]="searchTerm" (keydown.enter)="search()" placeholder="Search GitHub Repositories" class="SearchInput">
+            <button (click)="search()" class="SearchButton">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#393939" stroke="#979797" stroke-width="1.5" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
+                </svg>
+            </button>
+        </div>
+        <div class="Description">
+            Note! The results shown are only <span id="under">1 page</span> results
+        </div>
+    </div>
+</div>
+
+<div class="resultsWrapper">
+  <li class="results" *ngIf="repos.length > 0">
+    <ul *ngFor="let repo of repos">
+      <li>
+        <div class="TopSection">
+          <ul class="RepositoryName">{{ repo.name }}</ul>
+          <span id="space">/</span>
+          <ul class="RepositoryLink">
+            <a href="{{ repo.html_url }}" target="_blank">
+              Open on GitHub
+              <svg viewBox="0 0 24 24" class="w-4 ml-1 opacity-40" fill="none" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" height="1rem"><path d="M7 17L17 7"></path><path d="M7 7h10v10"></path></svg>
+            </a>
+          </ul>
+            <div class="RepositoryOwner">
+                <p>by: <a href="{{repo.owner.html_url}}">{{repo.owner.login}}</a></p>
+            </div> 
+        </div>
+        <div class="RepositoryLinkSection">
+          <ul class="RepositoryDescription">{{ repo.description }}</ul>
+        </div>
+        <hr>
+      </li>
+    </ul>
+  </li>
+</div>

@@ -1,0 +1,194 @@
+.searchWrapper{
+    display: flex;
+    justify-content: center; 
+    background-color: #292929;
+    padding: 1.5rem 0;
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    border-bottom: 1px solid #393939;
+    color: #979797;
+}
+
+.searchContainer {
+    max-width: 980px;
+    width: 100%; 
+    padding: 0 15px;
+}
+
+.title {
+    font-weight: 600;
+    letter-spacing: -.029375rem;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    color: #fff;
+    margin-bottom: 15px;
+}
+
+.Search {
+    display: flex;
+    width: 100%;
+}
+
+
+.resultsWrapper {
+    display: flex;
+    width: 100%; 
+    justify-content: center;
+    background-color: #222222;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.results {
+    max-width: 980px;
+    width: 100%; 
+}
+
+.Description {
+    margin-top: 1.5rem;
+}
+
+#under {
+    text-decoration: underline;
+}
+
+#space {
+    margin: 0 10px;
+    color: gray;
+}
+
+.SearchInput {
+    width: 100%;
+    background-color: #212121;
+    padding: 10px 15px;
+    line-height: 20px;
+    border-radius: 100px;
+    border: 1px solid #393939;
+    outline: none;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+    color: #979797;
+}
+
+.SearchButton {
+    background-color: #393939;
+    padding: 10px 20px;
+    border-top-right-radius: 100px;
+    border-bottom-right-radius: 100px;
+    outline: none;
+    border: none;
+    transition: ease-in-out color 1s;
+}
+
+.SearchButton:hover {
+    background-color: #555555;
+}
+
+.SearchButton:hover svg {
+    fill: #555555;
+}
+
+.SearchButton:active {
+    background-color: #f1f1f1;
+}
+
+.SearchButton:active svg {
+    fill: #f1f1f1;
+}
+
+li {
+    list-style: none;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+}
+
+hr {
+    border-top: 1px solid #393939;
+    margin: 1.5rem 0px;
+}
+
+.TopSection {
+    display: flex;
+    margin-top: 15px;
+}
+
+.RepositoryName {
+    white-space: nowrap;
+    background-color: #222222;
+    font-weight: 600;
+    letter-spacing: -.029375rem;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    color: #fff;
+    margin-left: 1rem;
+    margin-bottom: 10px;
+}
+
+.RepositoryDescription {
+    color: #979797;
+    display: flex;
+    flex-wrap: wrap;
+    font-weight: 400;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.RepositoryLink {
+    margin-left: 0;
+    padding-left: 0px;
+}
+
+.group1 {
+    display: flex;
+    align-items: center;
+}
+
+.RepositoryLinkSection {
+    margin: 0 15px;
+    background-color: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(24px); 
+    border: 1px solid #393939;
+    border-top: 0;
+    border-bottom: 0;
+    display: flex;
+    padding: 25px 30px;
+    border-radius: 0.75rem;
+}
+
+@media screen and (min-width: 320px) {
+    .RepositoryLinkSection { 
+        flex-direction: column;
+        justify-content: flex-start;
+        padding: 1rem;
+    }
+  }
+
+@media screen and (min-width: 768px) {
+    .RepositoryLinkSection { 
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 1rem;
+    }
+  }
+
+@media screen and (min-width: 768px) {
+    .RepositoryLinkSection { 
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 1rem;
+    }
+  }
+
+.RepositoryOwner { 
+    padding: 0 15px;
+    border-radius: 0.75rem;
+    color: #979797;
+}
+
+.RepositoryOwner a {
+    color: #fff;
+    font-weight: 600;
+}
